@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  redis:
+    container_name: auth-redis
+    image: redis:latest
+    volumes:
+      - ./containers/redis:/data
+    networks:
+      - auth-network
+    restart: always
+    ports:
+      - 6379:6379
+
+networks:
+  auth-network:
+    driver: bridge
