@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   redis:
-    container_name: auth-redis
+    container_name: auth-redis-js
     image: redis:latest
     volumes:
       - ./containers/redis:/data
